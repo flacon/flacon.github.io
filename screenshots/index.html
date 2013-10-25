@@ -1,0 +1,27 @@
+---
+layout: default
+title: Flacon - Screenshots
+menuItem: screenshots
+
+carousel_images:
+  - preview:     flacon-1-small.png
+    full:        flacon-1.png
+    description: Main window
+  - preview:     flacon-2-small.png
+    full:        flacon-2.png
+    description: Conversion process
+  - preview:     flacon-3-small.png
+    full:        flacon-3.png
+    description: Configure dialog
+---
+
+
+
+<p>
+<h2>Screenshots</h2>
+
+{% for img in page.carousel_images %}
+    {% include gallery_img.html img=img.full preview=img.preview description=img.description %}
+<p>
+{% endfor %}
+

@@ -1,0 +1,15 @@
+name: Flacon
+markdown: redcarpet
+pygments: true
+baseurl: /flacon
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks
+flacon:
+  release:
+    version: 0.9.1
+    link: https://github.com/SokoloffA/flacon/archive/v0.9.1.tar.gz
