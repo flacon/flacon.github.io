@@ -1,7 +1,7 @@
 name: Flacon
 markdown: redcarpet
 pygments: true
-baseurl: /flacon
+baseurl: 
 redcarpet:
   extensions:
     - hard_wrap
