@@ -19,13 +19,13 @@ _Please let me know about packages for your distribution._
 * [Lates stable version]({{ site.flacon.release.link }})
 
 ### Development version
-Development on Flacon happens in the [git repository](https://github.com/SokoloffA/flacon). Check out the code by running:
+Development on Flacon happens in the [git repository](https://github.com/flacon/flacon). Check out the code by running:
 
-    git clone https://github.com/SokoloffA/flacon.git
+    git clone https://github.com/flacon/flacon.git
 
-Or you can download sourses as [tarball](https://github.com/SokoloffA/flacon/archive/master.tar.gz)
+Or you can download sourses as [tarball](https://github.com/flacon/flacon/archive/master.tar.gz)
 
-[Full instructions and list of dependencies](https://github.com/SokoloffA/flacon/wiki/How-to-build)
+[Full instructions and list of dependencies](https://github.com/flacon/flacon/wiki/How-to-build)
 
 
 <br><br><br><br><br><br><br>
