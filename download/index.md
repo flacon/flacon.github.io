@@ -5,7 +5,7 @@ menuItem: download
 ---
 
 ## Ubuntu
-For Ubuntu do the following steps in terminal:
+Ubuntu users can use repository at [launchpad](https://launchpad.net/~flacon/+archive/ppa). Open up a terminal and input these commands:
 
     sudo add-apt-repository ppa:flacon
     sudo apt-get update
