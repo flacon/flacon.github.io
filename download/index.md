@@ -16,14 +16,15 @@ _Please let me know about packages for your distribution._
 
 ## Source code
 ###Stable release {{ site.flacon.release.version }}
-* [Lates stable version]({{ site.flacon.release.link }})
+The current stable release of Flacon is [{{ site.flacon.release.version }}]({{ site.flacon.release.link }}). See the [changelog](/changelog) for what has changed.
+
 
 ### Development version
-Development on Flacon happens in the [git repository](https://github.com/flacon/flacon). Check out the code by running:
+You can checkout the latest source code of Flacon from the [git repository](https://github.com/flacon/flacon). This is the prefered way to get Flacon if you want to benefit from the latest improvements and be able to upgrade easily.
 
     git clone https://github.com/flacon/flacon.git
 
-Or you can download sourses as [tarball](https://github.com/flacon/flacon/archive/master.tar.gz)
+Alternatively, you can download sourses as [tarball](https://github.com/flacon/flacon/archive/master.tar.gz)
 
 [Full instructions and list of dependencies](https://github.com/flacon/flacon/wiki/How-to-build)
 
