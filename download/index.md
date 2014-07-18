@@ -16,7 +16,7 @@ _Please let me know about packages for your distribution._
 
 ## Source code
 ###Stable release {{ site.flacon.release.version }}
-The current stable release of Flacon is [{{ site.flacon.release.version }}]({{ site.flacon.release.link }}). See the [changelog](/changelog) for what has changed.
+The current stable release of Flacon is [{{ site.flacon.release.version }}]({{ site.flacon.release.link }}/v{{ site.flacon.release.version }}.tar.gz). See the [changelog](/changelog) for what has changed.
 
 
 ### Development version
