@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Razor-qt - Changelog
+title: Flacon - Changelog
 menuItem: download
 ---
 
