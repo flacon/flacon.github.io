@@ -5,11 +5,38 @@ menuItem: download
 ---
 
 ## Ubuntu
-Ubuntu users can use repository at [launchpad](https://launchpad.net/~flacon/+archive/ppa). Open up a terminal and input these commands:
+_Ubuntu_ users can use repository at [launchpad](https://launchpad.net/~flacon/+archive/ppa). Open up a terminal and input these commands:
 
     sudo add-apt-repository ppa:flacon
     sudo apt-get update
     sudo apt-get install flacon
+
+## Debian
+### Stable, Unstable and Testing
+_Debian stable, unstable and testing_ and _Linux Mint "Debian"_ users can use repository at [OpenSUSE Build Service] (http://download.opensuse.org/repositories/home:/Sokoloff/Debian_7.0/). 
+Open up a terminal and input these commands as root:
+
+    echo "deb http://download.opensuse.org/repositories/home:/Sokoloff/Debian_7.0 ./" > /etc/apt/sources.list.d/flacon.list
+    wget http://download.opensuse.org/repositories/home:/Sokoloff/Debian_7.0/Release.key -O- | apt-key add -
+    apt-get update
+    apt-get install flacon
+
+    
+### OldStable
+_Debian old stable_ users can use repository at [OpenSUSE Build Service] (http://download.opensuse.org/repositories/home:/Sokoloff/Debian_6.0/). 
+Open up a terminal and input these commands as root:
+
+    echo "deb http://download.opensuse.org/repositories/home:/Sokoloff/Debian_6.0 ./" > /etc/apt/sources.list.d/flacon.list
+    wget http://download.opensuse.org/repositories/home:/Sokoloff/Debian_6.0/Release.key -O- | apt-key add -
+    apt-get update
+    apt-get install flacon
+    
+    
+## Rosa
+_Rosa_ users can install it from the official repositories.
+
+    urpmi flacon
+
 
 ## Other distribution
 _Please let me know about packages for your distribution._
@@ -26,7 +53,7 @@ You can checkout the latest source code of Flacon from the [git repository](http
 
 Alternatively, you can download sourses as [tarball](https://github.com/flacon/flacon/archive/master.tar.gz)
 
-[Full instructions and list of dependencies](https://github.com/flacon/flacon/wiki/How-to-build)
+[Full build instructions and list of dependencies](https://github.com/flacon/flacon/wiki/How-to-build)
 
 
 <br><br><br><br><br><br><br>
