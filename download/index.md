@@ -42,7 +42,7 @@ _FreeBSD_ users can install it from the official repositories.
 
     pkg install flacon
 
-Alternatively, users can install if from ports (build from source):
+Alternatively, users can install it from ports (build from source):
 
     cd /usr/ports/audio/flacon && make install clean
 
