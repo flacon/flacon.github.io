@@ -13,7 +13,7 @@ _Ubuntu_ users can use repository at [launchpad](https://launchpad.net/~flacon/+
 
 ## Debian
 ### Stable, Unstable and Testing
-_Debian stable, unstable and testing_ and _Linux Mint "Debian"_ users can use repository at [OpenSUSE Build Service] (http://download.opensuse.org/repositories/home:/Sokoloff/Debian_7.0/). 
+_Debian stable, unstable and testing_ and _Linux Mint "Debian"_ users can use repository at [OpenSUSE Build Service] (http://download.opensuse.org/repositories/home:/Sokoloff/Debian_7.0/).
 Open up a terminal and input these commands as root:
 
     echo "deb http://download.opensuse.org/repositories/home:/Sokoloff/Debian_7.0 ./" > /etc/apt/sources.list.d/flacon.list
@@ -21,21 +21,30 @@ Open up a terminal and input these commands as root:
     apt-get update
     apt-get install flacon
 
-    
+
 ### OldStable
-_Debian old stable_ users can use repository at [OpenSUSE Build Service] (http://download.opensuse.org/repositories/home:/Sokoloff/Debian_6.0/). 
+_Debian old stable_ users can use repository at [OpenSUSE Build Service] (http://download.opensuse.org/repositories/home:/Sokoloff/Debian_6.0/).
 Open up a terminal and input these commands as root:
 
     echo "deb http://download.opensuse.org/repositories/home:/Sokoloff/Debian_6.0 ./" > /etc/apt/sources.list.d/flacon.list
     wget http://download.opensuse.org/repositories/home:/Sokoloff/Debian_6.0/Release.key -O- | apt-key add -
     apt-get update
     apt-get install flacon
-    
-    
+
+
 ## Rosa
 _Rosa_ users can install it from the official repositories.
 
     urpmi flacon
+
+## FreeBSD
+_FreeBSD_ users can install it from the official repositories.
+
+    pkg install flacon
+
+Alternatively, users can install if from ports (build from source):
+
+    cd /usr/ports/audio/flacon && make install clean
 
 
 ## Other distribution
