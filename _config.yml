@@ -1,6 +1,6 @@
 name: Flacon
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 baseurl:
 redcarpet:
   extensions:
@@ -11,5 +11,5 @@ redcarpet:
     - fenced_code_blocks
 flacon:
   release:
-    version: 1.0.1
+    version: 1.2.0
     link: https://github.com/flacon/flacon/archive
