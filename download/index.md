@@ -32,6 +32,13 @@ Open up a terminal and input these commands as root:
     apt-get install flacon
 
 
+## Fedora
+_Fedora_ users can use repository at [copr.fedoraproject.org](https://copr.fedoraproject.org/coprs/region51/flacon/). Open up a terminal and input these commands:
+
+    sudo dnf copr enable region51/flacon
+    sudo dnf install flacon
+
+
 ## Rosa
 _Rosa_ users can install it from the official repositories.
 
