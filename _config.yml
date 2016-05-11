@@ -1,6 +1,6 @@
 name: Flacon
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 baseurl:
 redcarpet:
   extensions:
