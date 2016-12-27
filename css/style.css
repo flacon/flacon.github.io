@@ -23,6 +23,7 @@ html, .main {
 	margin:0 auto;
 	/*width:450px;*/
 	float:left;
+	position: absolute;
 }
 .logo img {
 	float:left;
