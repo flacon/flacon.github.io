@@ -4,7 +4,7 @@ body {
 	padding:0;
 	width:100%;
 	color:#3a3a3a;
-	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
+	font:normal 13px/1.8em Arial, Helvetica, sans-serif;
 }
 html, .main {
 	padding:0;
@@ -50,7 +50,7 @@ h1 small {
 	float:left;
 	color:#fff;
 	padding:18px 0 0 10px;
-	font:normal 12px Arial, Helvetica, sans-serif;
+	font:normal 13px Arial, Helvetica, sans-serif;
 	letter-spacing:normal;
 }
 h2 {
@@ -62,13 +62,14 @@ h2 {
 p {
 	margin:8px 0;
 	padding:0 0 8px 0;
-	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
+	/*font:normal 15px/1.8em Arial, Helvetica, sans-serif;*/
 }
 p.spec {
 	text-align:right;
 }
 a {
-	color:#78bbe6;
+	/*color:#78bbe6;*/
+	color:#07c;
 	text-decoration:none;
 }
 a:hover {
