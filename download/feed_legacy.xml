@@ -1,0 +1,22 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>{{site.name}}</title>
+      <description>Most recent updates to {{site.name}} for legacy MacOs</description>
+      <language>en</language>
+{% for post in site.categories.changelog %}{% if post.apple_legacy %}
+      <item>
+        <title>{{post.title}}</title>
+        <description>{{ post.content | xml_escape }}</description>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <enclosure url="https://github.com/flacon/flacon/releases/download/v{{post.version}}/Flacon_{{post.version}}-LegacyOS.dmg"
+                   sparkle:version="{{post.version}}"
+                   length="0"
+                   type="application/octet-stream" />
+    </item>
+{%endif%}{% endfor %}
+  </channel>
+</rss>
