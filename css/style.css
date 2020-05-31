@@ -29,7 +29,8 @@ html, .main {
 	float:left;
 	margin:0 10px 0 0;
 }
-h1 {
+
+.logo h1 {
 	margin:0;
 	padding:5px 0;
 	width:300px;
@@ -37,15 +38,18 @@ h1 {
 	font:normal 36px Arial, Helvetica, sans-serif;
 	letter-spacing:-2px;
 }
-h1 a {
+
+.logo h1 a {
 	color:#fff;
 	text-decoration:none;
 	float:left;
 }
-h1 span {
+
+.logo h1 span {
 	color:#78bbe6;
 }
-h1 small {
+
+.logo h1 small {
 	display:block;
 	float:left;
 	color:#fff;
@@ -53,6 +57,17 @@ h1 small {
 	font:normal 13px Arial, Helvetica, sans-serif;
 	letter-spacing:normal;
 }
+
+
+h1 {
+	margin: 30pt 0 10pt 0;
+	padding:5px 0;
+	width:300px;
+	color:#494949;
+	font:normal 34px Arial, Helvetica, sans-serif;
+	letter-spacing:-2px;
+}
+
 h2 {
 	font:normal 24px Arial, Helvetica, sans-serif;
 	padding:0;
