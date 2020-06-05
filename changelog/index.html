@@ -1,0 +1,26 @@
+---
+title: Release Notes
+description: This page lists new features, improvements and fixes in the program.
+---
+
+
+<div class="text-container">
+	<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Post</a></p>
+	<div class="blog-posts">
+
+		{% for post in site.categories.changelog limit: 5 %}
+			<div class="blog-post">
+				
+				<div class="post-details">
+					<h2 style="flex-grow: 1;">{{ post.title }}</h2>
+					<span class="post-date">{{ post.date | date_to_string }}</span>
+				</div>
+
+				<div class="post-content">
+					<p>{{ post.content }}</p>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+</div>

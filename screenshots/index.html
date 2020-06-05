@@ -1,33 +1,28 @@
 ---
-layout: default
-title: Flacon - Screenshots
-menuItem: screenshots
+title: Screenshots
+description: 
 
-carousel_images:
+screenshots:
   - preview:     flacon-main-small.png
     full:        flacon-main.png
     description: Main window
-
-  - preview:     flacon-cover-small.png
-    full:        flacon-cover.png
-    description: Disk cover dialog
 
   - preview:     flacon-convert-small.png
     full:        flacon-convert.png
     description: Conversion process
 
+  - preview:     flacon-cover-small.png
+    full:        flacon-cover.png
+    description: Disk cover dialog
+
   - preview:     flacon-config-small.png
     full:        flacon-config.png
-    description: Configure dialog
+    description: Preferences dialog
 ---
 
-
-
-<p>
-<h2>Screenshots</h2>
-
-{% for img in page.carousel_images %}
-    {% include gallery_img.html img=img.full preview=img.preview description=img.description %}
-<p>
+{% for scr in page.screenshots %}
+	<div style="text-align: center;">
+		<h2>{{ scr.description }}</h2>
+		<a href="/images/{{ scr.full}}"><img style="max-width: 100%; max-height: 500px;" src="/images/{{ scr.full}}"></a>
+	</div>	
 {% endfor %}
-

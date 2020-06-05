@@ -1,0 +1,173 @@
+
+.bottom-cta {
+	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%);
+	color: #fff;
+	text-align: center;
+	margin: 0;
+	padding: 100px 0;
+
+	h2 {
+		margin-bottom: 50px;
+	}
+}
+
+
+.testimonial {
+	background: #f5f5f5;
+	margin: 0;
+	padding: 100px 0;
+
+	.testimonial-block {
+		max-width: 750px;
+		width: 98%;
+		margin: 0 auto;
+
+		@media #{$tablet} {
+			@include flexbox;
+
+			blockquote {
+				-webkit-flex: 1;
+				flex: 1;
+			}
+		}
+	}
+}
+
+
+.hero {
+	color: #ffffff;
+	text-align: center;
+	background: linear-gradient(to bottom, $middle-gradient-color 0%, $secondary-brand-color 100%) no-repeat #a05fb7;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	line-height: 1.4em;
+	font-size: 1.38rem;
+
+	p {
+		color: #fff;
+	}
+
+	.hero-title {
+		font-size: 2.3rem;
+	 	margin: 0;
+		color: #fff;
+		line-height: 2.9rem;
+	}
+}
+
+@media (max-width: 450px) {
+	.download {
+		display: none;
+	}
+}
+
+
+@media #{$desktop} {
+	.flex {
+		@include flexbox;
+		align-items: center;
+		flex-direction: row;
+
+		.text, .image {
+			-webkit-flex: 1;
+			flex: 1;
+			padding: 0 20px;
+		}
+	}
+
+
+	.content section:nth-child(even) .flex {
+		flex-direction: row-reverse;
+	}
+}
+
+.text {
+	line-height: 1.4em;
+}
+
+.button.download a {
+	font-size: 1rem;
+	background: #0F9F09;
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 16px 50px;
+	font-weight: 400;
+}
+
+.button.download a:hover {
+	background: #fff;
+	color: $brand-color;
+}
+
+
+.changelog {
+	background: #f5f5f5;
+	margin: 0;
+	padding: 100px 0 50px 0;
+	line-height: 1.4em;
+
+
+	.changelog-block {
+		width: 98%;
+		margin: 0 auto;
+
+		@media #{$tablet} {
+			@include flexbox;
+
+			blockquote {
+				-webkit-flex: 1;
+				flex: 1;
+			}
+		}
+
+		.date {
+			font-size: 1rem;
+		}
+	}
+}
+
+.landing {
+	img {
+		width: 100%;
+	}
+}
+
+.payments {
+	margin-top: 5rem;
+	@media #{$tablet} {
+		@include flexbox;
+		flex-direction: row-reverse;
+	}
+
+	div {
+		margin: 16px;
+		vertical-align: top;		
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	form {
+		display: block;
+		margin-left: 0;
+	}
+
+	button {
+		margin-bottom: 32px;		
+	}
+
+	button {
+		width: 200px;
+	}
+
+	button.paypall {
+		background-color: #ffc43a;
+		border: 1px solid #daa730;
+		color: #333;
+	}
+
+	.description {
+		flex-grow: 2;
+	}
+}

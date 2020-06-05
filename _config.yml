@@ -1,15 +1,44 @@
-name: Flacon
-markdown: kramdown
-highlighter: rouge
+# ----
+# Site
+
+title: Flacon
+url: "https://flacon.github.io/"
 baseurl:
-redcarpet:
-  extensions:
-    - hard_wrap
-    - no_intra_emphasis
-    - autolink
-    - strikethrough
-    - fenced_code_blocks
+google_analytics_key: UA-21424676-7
+
 flacon:
   release:
     version: 6.0.0
     link: https://github.com/flacon/flacon/archive
+
+
+# -----
+# Build
+
+timezone: Etc/UTC
+
+collections:
+  staff_members:
+    _hide_content: true
+
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE

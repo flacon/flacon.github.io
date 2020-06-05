@@ -1,31 +1,50 @@
-{% include html_head.html css="/css/default.css" %}
-<body>
-<div class="main">
+<!doctype html>
 
-<div class="header">
-  <div class="header_resize">
-    <div class="logo">
-      <h1><a href="/index.html">Flac<span>on</span></a><small></small></a></h1>
-    </div>
-    <div class="menu_nav">
-      {% include menu.html %}
-      <div class="clr"></div>
-    </div>
-    <div class="clr"></div>
-  </div>
-</div>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			{% if page.title %}
+				<title>Flacon - {{ page.title }}</title>
+			{% else %}					
+				<title>Flacon</title>
+			{% endif %}
+		<meta name="keywords" content="cue, flacon, audio, converter, ape, flac, mp3, cd, ogg">
 
+		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-16x16.png"   sizes="16x16"   />
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-32x32.png"   sizes="32x32"   />
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-48x48.png"   sizes="48x48"   />
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-64x64.png"   sizes="64x64"   />
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-128x128.png" sizes="128x128" />
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-256x256.png" sizes="256x256" />
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-512x512.png" sizes="512x512" />
 
-  <div class="clr"></div>
+		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+			<script>
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', '{{ site.google_analytics_key }}', 'auto');
+				ga('send', 'pageview');
+			</script>
+			<script async src='https://www.google-analytics.com/analytics.js'></script>
+		{% endif %}
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="company-name"><a href="{{ site.baseurl }}/">Flacon</a></div>
+				<!--<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.png" alt="Flacon Logo" width="95" height="32" /></a></div>-->
+				{% include navigation.html %}
+			</div>
+		</header>
+		{{ content }}
 
-  <div class="content">
-    <div class="content_resize">
-        {{ content }}
-      <div class="clr"></div>
-    </div>
-  </div>
-
-{% include footer.html %}
-</div>
-</body>
+		{% include footer.html %}
+		<script>
+			document.getElementById("open-nav").onclick = function () {
+				document.body.classList.toggle("nav-open");
+				return false;
+			};
+		</script>
+	</body>
 </html>

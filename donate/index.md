@@ -1,53 +1,47 @@
 ---
-layout: default
-title: Boomaga - Support us
+title: Support Flacon
 menuItem: Donate
 ---
+<link rel="stylesheet" href="/css/font-awesome.css">
 
-Support Flacon
----------------
-
-Flacon is free software. If you've found Boomaga useful, it'd be great if you could send us a little gift. We are not really expecting to get anything out of this, but if you could see your way to give us just a little money then we will be your best friend forever!
-
-Click on one of these buttons to donate via PayPal:
+Flacon is a free and open source application. If you've found the program useful, it'd be great if you could send me a little gift. 
+I'm not really expecting to get anything out of this, but if you could see your way to give us just a little money then we will be your best friend forever!
 
 
-Donate in US Dollar ($)
------------------------
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="7YRV93G94CQU4">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
-</form>
 
-<br>
+<div class="payments">
+    <div class="description">
+        <h2>Donate via PayPall</h2>
+        Click on one of these buttons to donate via PayPal. This will take you to the PayPal site where you can contribute using either your PayPal account or a credit card. 
+    </div>
+    <div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="7YRV93G94CQU4">
+            <button type="submit" class="paypall"><i class="fa fa-paypal" aria-hidden="true"></i> PayPall in $</button>
+        </form>
 
-Donate in Euro (€)
-------------------
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="EKKP5P8LZF4JL">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
-</form>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="EKKP5P8LZF4JL">
+            <button type="submit" class="paypall"><i class="fa fa-paypal" aria-hidden="true"></i> PayPall in €</button>
+        </form>
 
-<br>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="B5BZYPECQ9GUL">
+            <button type="submit" class="paypall"><i class="fa fa-paypal" aria-hidden="true"></i> PayPall in ₽</button>
+        </form>
+    </div>
+</div>
 
-Donate in Rubles (Rub)
-------------------
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="B5BZYPECQ9GUL">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-
-<br><br>
-
-Bitcoin
--------
-Bitcoin address: <a href="bitcoin:18kj9UWRZC9YxZMoN2iz2A8Xmwqxxdyp8X?label=Boomaga%20Donation">18kj9UWRZC9YxZMoN2iz2A8Xmwqxxdyp8X</a>
-
-<br><br><br><br><br><br><br>
+<div class="payments">
+    <div class="description">
+        <h2>Donate via Bitcoun</h2>
+        Click on Bitcoin button to donate in BTC.<br>
+        My Bitcoin wallet address is: <small><a style="overflow-wrap: break-word;" href="bitcoin:18kj9UWRZC9YxZMoN2iz2A8Xmwqxxdyp8X?label=Boomaga%20Donation">18kj9UWRZC9YxZMoN2iz2A8Xmwqxxdyp8X</a></small>
+    </div>
+    <div>        
+        <a href="bitcoin:18kj9UWRZC9YxZMoN2iz2A8Xmwqxxdyp8X?label=Boomaga%20Donation"><button><i class="fa fa-btc" aria-hidden="true"></i> Bitcoin</button></a>
+    </div>
+</div>

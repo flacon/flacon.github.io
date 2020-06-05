@@ -1,0 +1,3 @@
+{%- for post in site.categories.changelog limit: 1 -%}
+        https://flathub.org/repo/appstream/com.github.Flacon.flatpakref
+{%- endfor -%}

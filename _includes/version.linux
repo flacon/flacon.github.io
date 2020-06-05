@@ -1,0 +1,4 @@
+{%- for post in site.categories.changelog limit: 1 -%}
+    {{post.version}}
+    {%- break -%}}
+{%- endfor -%}

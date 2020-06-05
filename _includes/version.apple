@@ -1,0 +1,6 @@
+{%- for post in site.categories.changelog -%}
+    {%- if post.apple -%}
+        {{post.version}}
+        {%- break -%}
+    {%- endif -%}
+{%- endfor -%}

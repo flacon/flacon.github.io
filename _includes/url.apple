@@ -1,0 +1,6 @@
+{%- for post in site.categories.changelog -%}
+    {%- if post.apple -%}
+        https://github.com/flacon/flacon/releases/download/v{{post.version}}/Flacon_{{post.version}}.dmg
+        {%- break -%}
+    {%- endif -%}
+{%- endfor -%}

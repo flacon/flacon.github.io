@@ -1,25 +1,94 @@
 ---
-layout: index
-title: Flacon - Audio File Encoder
-menuItem: home
+title: Audio File Encoder
+description: Flacon is a open source audio file encoder.
 ---
-<h2>What is Flacon?</h2>
-<p>Flacon extracts individual tracks from one big audio file containing the entire album of music and saves them as separate audio files.</p>
-<p>To do this, it uses information from the appropriate CUE file. Besides, Flacon makes it possible to conveniently revise or specify tags both for all tracks at once or for each tag separately.</p>
+<section class="hero">
+	<div class="text-container">
+		<div class="hero-title editable">Flacon is a open source <strong>audio file encoder</strong>.</div>
+		<p class="subtext editable">You can split a single large audio file containing the entire album into the separate audio tracks.</p>
+		<div class="cta button download"><a id="downlod_button" target="_blank" href="{{ site.baseurl }}/download/">Get Flacon {{ site.flacon.release.version }}</a></div>
+		<div class="heroimg">
+			<img src="{{ site.baseurl }}/images/landing-main.png" alt="Main window" class="screenshot editable" />
+		</div>
+	</div>
+</section>
+
+<div class="content landing">
+	<section>
+		<div class="container flex">
+			<div class="text editable">
+				<h1>What is Flacon?</h1>
+				<p>Flacon extracts individual tracks from one big audio file containing the entire album of music and saves them as separate audio files.</p>
+				<p>To do this, it uses information from the appropriate CUE file. Besides, Flacon makes it possible to conveniently revise or specify tags both for all tracks at once or for each tag separately.</p>
+			</div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/images/landing-convert.png" alt="Conversion process" class="editable" />
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container flex">
+			<div class="text editable">
+				<h1>Features</h1>
+				<div class="text-block">
+					<ul>
+  					<li>Supported input formats: WAV, FLAC, APE, WavPack, True Audio (TTA)</li>
+  					<li>Supported out formats: FLAC, WAV, WavPack, AAC, OGG or MP3</li>
+  					<li>Replay Gain analysis: ALBUM-gain and TRACK-gain modes</li>
+  					<li>Multi-threaded conversion process</li>
+  					<li>Automatic character set detection for CUE files</li>
+  					<li>Generation of the pertrack CUE file in the output dir</li>
+				</ul>
+				</div>
+			</div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/images/landing-config.png" alt="Preferences dialog" class="editable" />
+			</div>
+		</div>
+	</section>
 
 
-<h2>Features</h2>
-<p>
-<ul>
-  <li>Supported input formats: WAV, FLAC, APE, WavPack, True Audio (TTA).</li>
-  <li>Supported out formats: FLAC, WAV, WavPack, AAC, OGG or MP3.</li>
-  <li>Replay Gain analysis (album-gain and track-gain modes).</li>
-  <li>Multi-threaded conversion process.</li>
-  <li>Automatic character set detection for CUE files.</li>
-  <li>Generation of the pertrack CUE file in the output dir.</li>
-</ul>
+	<section class="changelog">
+		<div class="container flex">
+			<div class="changelog-block">
+				{% for post in site.categories.changelog limit:1 %}
+				<div>
+					<h1><small>What's New in</small> <strong>{{post.title}}</strong></h1>
+					<div class="date">{{post.date | date_to_string }}</div>
+				</div>
+				<div>
+					{{ post.content }}
+					<div class="right"><a href="changelog">Full changelog</a></div>	
+				</div>
+				{% endfor %}
+				
+			</div>
+		</div>
+	</section>
 
-<h2>Screenshot</h2>
-{% include gallery_img.html img="screenshots/flacon-main.png" preview="screenshots/flacon-main-small.png" %}
-<p><a href="/screenshots">More screenshots</a></p>
-</p>
+<!--
+	<section class="bottom-cta">
+		<h2 class="editable"><strong>Improve</strong> your sales process today</h2>
+		<div class="button alt"><a href="download">FREE DOWNLOAD</a></div>
+	</section>
+-->	
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function(){
+
+		// Download button ...............
+		if (navigator.appVersion.indexOf("Mac")!=-1) {
+			document.getElementById("downlod_button").innerHTML = "Download Flacon for macOS";
+			document.getElementById("downlod_button").title = "Download Flacon {% include version.apple %} for macOS";
+			document.getElementById("downlod_button").href = "{% include url.apple %}";
+		}
+
+		if (navigator.appVersion.indexOf("Linux")!=-1 || navigator.appVersion.indexOf("X11")!=-1) {
+			document.getElementById("downlod_button").innerHTML = "Get Flacon for Linux";
+			document.getElementById("downlod_button").title = "Get Flacon {% include version.linux %} for Linux";
+			document.getElementById("downlod_button").href = "https://flathub.org/apps/details/com.github.Flacon";
+		}
+	})
+  </script>  
