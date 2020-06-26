@@ -11,26 +11,26 @@ I'm not really expecting to get anything out of this, but if you could see your 
 
 <div class="payments">
     <div class="description">
-        <h2>Donate via PayPall</h2>
+        <h2>Donate via PayPal</h2>
         Click on one of these buttons to donate via PayPal. This will take you to the PayPal site where you can contribute using either your PayPal account or a credit card. 
     </div>
     <div>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="7YRV93G94CQU4">
-            <button type="submit" class="paypall"><i class="fa fa-paypal" aria-hidden="true"></i> PayPall in $</button>
+            <button type="submit" class="paypal"><i class="fa fa-paypal" aria-hidden="true"></i> PayPal in $</button>
         </form>
 
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="EKKP5P8LZF4JL">
-            <button type="submit" class="paypall"><i class="fa fa-paypal" aria-hidden="true"></i> PayPall in €</button>
+            <button type="submit" class="paypal"><i class="fa fa-paypal" aria-hidden="true"></i> PayPal in €</button>
         </form>
 
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="B5BZYPECQ9GUL">
-            <button type="submit" class="paypall"><i class="fa fa-paypal" aria-hidden="true"></i> PayPall in ₽</button>
+            <button type="submit" class="paypal"><i class="fa fa-paypal" aria-hidden="true"></i> PayPal in ₽</button>
         </form>
     </div>
 </div>
