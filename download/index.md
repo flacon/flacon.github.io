@@ -18,7 +18,7 @@ _Mac OS_ users can download program from the our site.<br>
 [Flacon_{% include version.apple %}.dmg]({% include url.apple %})
 
 If you are using old versions of _Mac OS_ and have problems with running the Flacon. Try the version for the legacy MacOS.<br>
-[Flacon_{% include version.apple %}-LegacyOS.dmg]({% include url.apple_legacy %})
+[Flacon_{% include version.apple_legacy %}-LegacyOS.dmg]({% include url.apple_legacy %})
 
 
 
