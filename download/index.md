@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Download
-description: Flacon available for Windows and Linux.
+description: Flacon available for Mac and Linux.
 menuItem: download
 ---
 
