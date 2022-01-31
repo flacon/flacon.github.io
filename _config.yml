@@ -8,7 +8,7 @@ google_analytics_key: UA-21424676-7
 
 flacon:
   release:
-    version: 8.0.0
+    version: 8.3.0
     link: https://github.com/flacon/flacon/archive
 
 
