@@ -86,9 +86,9 @@ description: Flacon is a open source audio file encoder.
 		}
 
 		if (navigator.appVersion.indexOf("Linux")!=-1 || navigator.appVersion.indexOf("X11")!=-1) {
-			document.getElementById("downlod_button").innerHTML = "Get Flacon for Linux";
-			document.getElementById("downlod_button").title = "Get Flacon {% include version.linux %} for Linux";
-			document.getElementById("downlod_button").href = "https://flathub.org/apps/details/com.github.Flacon";
+			document.getElementById("downlod_button").innerHTML = "Download Flacon for Linux";
+			document.getElementById("downlod_button").title = "Download Flacon {% include version.linux %} for Linux";
+			document.getElementById("downlod_button").href = "{% include url.linux %}";
 		}
 	})
   </script>  

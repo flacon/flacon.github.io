@@ -8,7 +8,7 @@ menuItem: download
 
 <div class="download-block _flex">
     <div class="button big "><a href="{% include url.apple %}">Download APP for Mac</a></div>
-    <div class="button big" ><a target="_blank" href="https://flathub.org/apps/details/com.github.Flacon">Download Flatpak for Linux</a></div>
+    <div class="button big" ><a href="{% include url.linux %}">Download AppImage for Linux</a></div>
 </div>
 
 
@@ -21,10 +21,18 @@ If you are using old versions of _Mac OS_ and have problems with running the Fla
 [Flacon_{% include version.apple_legacy %}-LegacyOS.dmg]({% include url.apple_legacy %})
 
 
+## AppImage for Linux
+AppImage is a format for distributing portable software on Linux without needing superuser permissions to install the application.
+To run an AppImage, simply:
+* Download <a href="{% include url.linux %}">flacon-{% include version.linux %}-x86_64.AppImage</a>  file
+* Make it executable and run!
+```
+$ chmod a+x flacon-{% include version.linux %}-x86_64.AppImage
+$ ./flacon-{% include version.linux %}-x86_64.AppImage
+```
 
 ## Flatpack for Linux
 Flatpak is a modern method of distributing Linux applications. The applications run inside a sandbox environment and don't rely on packages or environment provided by your Linux distributions.
-Flatpak is the recommended way to install the Flacon under Linux.
 
 Flatpak builds of Flacon are now provided on [Flathub](https://flathub.org/apps/details/com.github.Flacon) (direct link to [download flcon](https://flathub.org/repo/appstream/com.github.Flacon.flatpakref)).
 
