@@ -4,7 +4,7 @@
 GITHUB_USER = "Flacon"
 GITHUB_REPO = "flacon"
 
-MIN_VERSION = "9.5.0"
+MIN_VERSION = "10.0.0"
 
 #######################################
 URL_TEMPLATE = "https://api.github.com/repos/%s/%s/releases"
