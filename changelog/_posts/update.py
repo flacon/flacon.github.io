@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# v 0.2
+# v 0.3
 
 GITHUB_USER = "Flacon"
 GITHUB_REPO = "flacon"
@@ -8,6 +8,9 @@ MIN_VERSION = "10.0.0"
 
 #######################################
 URL_TEMPLATE = "https://api.github.com/repos/%s/%s/releases"
+
+DMG_TEMPLATE       = "https://github.com/flacon/flacon/releases/download/v{VER}/Flacon_{VER}.dmg"
+APP_IMAGE_TEMPLATE = "https://github.com/flacon/flacon/releases/download/v{VER}/flacon-{VER}-x86_64.AppImage"
 
 import sys
 import os
@@ -33,11 +36,11 @@ class Release:
         self.tag = data["tag_name"]
         self.version = self.extractVersion(self.tag)
         self.prerelease = data["prerelease"]
-        self.url = self.getUrl(data)
+        self.dmg_urls = self.getUrls(data, ".dmg")
+        self.appImage_urls = self.getUrls(data, ".AppImage")
         self.changeLog = data["body"]
         self.date = datetime.datetime.strptime(data["published_at"], '%Y-%m-%dT%H:%M:%SZ')
-        self.dmg_exist = self.hasAsset(data, ".dmg")
-        self.appImage_exist = self.hasAsset(data, ".AppImage")
+
 
     def extractVersion(self, tag):
         s = tag
@@ -62,19 +65,14 @@ class Release:
 
         raise Error(f"Can't extract version from '{tag}' tag")
 
-    def hasAsset(self, data, ext):
+
+    def getUrls(self, data, ext):
+        res = []
         for asset in data["assets"]:
-            if asset["name"].endswith(ext):
-                return True
+            if asset["browser_download_url"].endswith(ext):
+                res.append(asset["browser_download_url"])
 
-        return False
-
-    def getUrl(self, data):
-        for asset in data["assets"]:
-            if asset["browser_download_url"].endswith(".dmg"):
-                return asset["browser_download_url"]
-
-        return None
+        return res
 
 
 def download(url):
@@ -111,13 +109,33 @@ def dump(releases):
     for r in releases:
         print("*************************************")
         print(f"{r.version} {r.date}")
-        print(f"DMG:{r.dmg_exist}, AppImage:  {r.appImage_exist}")
+        print(f"DMG:     {r.dmg_urls}")
+        print(f"AppImage:{r.appImage_urls}")
         print(".....................................")
         print(r.changeLog)
         print()
 
 
+def checkUrl(version, urls, template):
+    expect = template.replace("{VER}", version)
+    if not expect in urls:
+        actual = "\n              ".join(urls)
+
+        raise Error(f'''Incorrect download url for {version}:
+    expected: {expect}
+    actual:   {actual}''')
+
+
 def write(release):
+    dmg_exist = release.dmg_urls != []
+    if dmg_exist:
+        checkUrl(release.version, release.dmg_urls, DMG_TEMPLATE)
+
+    appImage_exist = release.dmg_urls != []
+    if dmg_exist:
+        checkUrl(release.version, release.appImage_urls, APP_IMAGE_TEMPLATE)
+
+
     file_name="%s-Flacon-%s.md" % (release.date.strftime("%Y-%m-%d"), release.version)
 
     def boolToStr(v):
@@ -128,8 +146,8 @@ def write(release):
     lines.append("---")
     lines.append(f"layout: default")
     lines.append(f"version: {release.version}")
-    lines.append(f"apple: {boolToStr(release.dmg_exist)}")
-    lines.append(f"appimage: {boolToStr(release.appImage_exist)}")
+    lines.append(f"apple: {boolToStr(dmg_exist)}")
+    lines.append(f"appimage: {boolToStr(appImage_exist)}")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -163,4 +181,4 @@ if __name__ == "__main__":
             write(r)
 
     except Error as err:
-        print("Error: %s" % err, file=sys.stderr)
+        print("Error:\n %s" % err, file=sys.stderr)
