@@ -13,14 +13,10 @@ DMG_TEMPLATE       = "https://github.com/flacon/flacon/releases/download/v{VER}/
 APP_IMAGE_TEMPLATE = "https://github.com/flacon/flacon/releases/download/v{VER}/flacon-{VER}-x86_64.AppImage"
 
 import sys
-import os
 import urllib.request
 import json
 import re
-from xml.dom import minidom
 import datetime
-import markdown
-
 
 class Error(Exception):
     pass
@@ -45,7 +41,7 @@ class Release:
     def extractVersion(self, tag):
         s = tag
 
-        res = re.search("-beta\d+", s)
+        res = re.search("-beta\\d+", s)
         if res:
             s = s[:res.start()]
 
@@ -60,7 +56,7 @@ class Release:
                 s = s[len(p):]
                 break
 
-        if (re.match("[\d\.]+$", s)):
+        if (re.match("[\\d\\.]+$", s)):
             return s
 
         raise Error(f"Can't extract version from '{tag}' tag")
@@ -159,8 +155,8 @@ def write(release):
     if not changeLog.endswith("\n"):
         lines.append("")
 
-    print("=================================================================")
-    print("\n".join(lines))
+    #print("=================================================================")
+    #print("\n".join(lines))
 
 
     f =  open(file_name, "wb")
