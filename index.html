@@ -59,10 +59,10 @@ description: Flacon is a open source audio file encoder.
 				</div>
 				<div>
 					{{ post.content }}
-					<div class="right"><a href="changelog">Full changelog</a></div>	
+					<div class="right"><a href="changelog">Full changelog</a></div>
 				</div>
 				{% endfor %}
-				
+
 			</div>
 		</div>
 	</section>
@@ -72,7 +72,7 @@ description: Flacon is a open source audio file encoder.
 		<h2 class="editable"><strong>Improve</strong> your sales process today</h2>
 		<div class="button alt"><a href="download">FREE DOWNLOAD</a></div>
 	</section>
--->	
+-->
 </div>
 
 <script>
@@ -88,7 +88,7 @@ description: Flacon is a open source audio file encoder.
 		if (navigator.appVersion.indexOf("Linux")!=-1 || navigator.appVersion.indexOf("X11")!=-1) {
 			document.getElementById("downlod_button").innerHTML = "Download Flacon for Linux";
 			document.getElementById("downlod_button").title = "Download Flacon {% include version.linux %} for Linux";
-			document.getElementById("downlod_button").href = "{% include url.linux %}";
+			document.getElementById("downlod_button").href = "{% include url.linux_x86 %}";
 		}
 	})
-  </script>  
+  </script>

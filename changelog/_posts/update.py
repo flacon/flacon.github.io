@@ -4,13 +4,13 @@
 GITHUB_USER = "Flacon"
 GITHUB_REPO = "flacon"
 
-MIN_VERSION = "10.0.0"
+MIN_VERSION = "13.0.0"
 
 #######################################
 URL_TEMPLATE = "https://api.github.com/repos/%s/%s/releases"
 
 DMG_TEMPLATE       = "https://github.com/flacon/flacon/releases/download/v{VER}/Flacon_{VER}.dmg"
-APP_IMAGE_TEMPLATE = "https://github.com/flacon/flacon/releases/download/v{VER}/flacon-{VER}-x86_64.AppImage"
+APP_IMAGE_TEMPLATE = "https://github.com/flacon/flacon/releases/download/v{VER}/Flacon-{VER}-x86_64.AppImage"
 
 import sys
 import urllib.request
@@ -127,8 +127,8 @@ def write(release):
     if dmg_exist:
         checkUrl(release.version, release.dmg_urls, DMG_TEMPLATE)
 
-    appImage_exist = release.dmg_urls != []
-    if dmg_exist:
+    appImage_exist = release.appImage_urls != []
+    if appImage_exist:
         checkUrl(release.version, release.appImage_urls, APP_IMAGE_TEMPLATE)
 
 

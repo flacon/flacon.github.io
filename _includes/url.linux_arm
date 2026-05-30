@@ -1,0 +1,2 @@
+{%- assign post = site.categories.changelog | where: "appimage", true | first -%}
+https://github.com/flacon/flacon/releases/download/v{{post.version}}/Flacon-{{post.version}}-aarch64.AppImage

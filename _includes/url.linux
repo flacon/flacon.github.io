@@ -1,6 +1,0 @@
-{%- for post in site.categories.changelog -%}
-    {%- if post.appimage -%}
-        https://github.com/flacon/flacon/releases/download/v{{post.version}}/flacon-{{post.version}}-x86_64.AppImage
-        {%- break -%}
-    {%- endif -%}
-{%- endfor -%}

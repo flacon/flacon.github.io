@@ -1,2 +1,2 @@
 {%- assign post = site.categories.changelog | where: "appimage", true | first -%}
-{{post.version}}
+Flacon-{{post.version}}-x86_64.AppImage

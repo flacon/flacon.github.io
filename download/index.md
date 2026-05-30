@@ -7,8 +7,9 @@ menuItem: download
 
 
 <div class="download-block _flex">
-    <div class="button big "><a href="{% include url.apple %}">Download APP for Mac</a></div>
-    <div class="button big" ><a href="{% include url.linux %}">Download AppImage for Linux</a></div>
+    <div class="button big "><a href="{% include url.apple %}">APP for Mac</a></div>
+    <div class="button big" ><a href="{% include url.linux_x86 %}">AppImage for x86_64 Linux</a></div>
+    <div class="button big" ><a href="{% include url.linux_arm %}">AppImage for ARM Linux</a></div>
 </div>
 
 
@@ -21,7 +22,7 @@ _Mac OS_ users can download program from the our site.<br>
 ## AppImage for Linux
 AppImage is a format for distributing portable software on Linux without needing superuser permissions to install the application.
 To run an AppImage, simply:
-* Download <a href="{% include url.linux %}">flacon-{% include version.linux %}-x86_64.AppImage</a>  file
+* Download <a href="{% include url.linux_x86 %}">{% include name.linux_x86 %}</a> or <a href="{% include url.linux_arm %}">{% include name.linux_arm %}</a> file
 * Make it executable and run!
 ```
 $ chmod a+x flacon-{% include version.linux %}-x86_64.AppImage

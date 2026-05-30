@@ -13,24 +13,24 @@
   new_window: false
   highlight: false
 
-# - name: Wiki
-#   link: https://github.com/flacon/flacon/wiki
-#   new_window: true
-#   highlight: false  
-
 - name: Issues
   link: https://github.com/flacon/flacon/issues
   new_window: true
-  highlight: false  
+  highlight: false
 
 - name: GitHub
   link: https://github.com/flacon/flacon
   new_window: true
-  highlight: false  
+  highlight: false
 
-- name: Donate
-  link: /donate
-  new_window: false
-  highlight: true
+- name: Wiki
+  link: https://github.com/flacon/flacon/wiki
+  new_window: true
+  highlight: false
+
+# - name: Donate
+#   link: /donate
+#   new_window: false
+#   highlight: true
 
 

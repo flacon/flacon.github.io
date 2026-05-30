@@ -1,6 +1,2 @@
-{%- for post in site.categories.changelog -%}
-    {%- if post.apple -%}
-        {{post.version}}
-        {%- break -%}
-    {%- endif -%}
-{%- endfor -%}
+{%- assign post = site.categories.changelog | where: "apple", true | first -%}
+{{post.version}}

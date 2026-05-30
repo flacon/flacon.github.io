@@ -1,6 +1,0 @@
-{%- for post in site.categories.changelog -%}
-    {%- if post.apple_legacy -%}
-        {{post.version}}
-        {%- break -%}
-    {%- endif -%}
-{%- endfor -%}
